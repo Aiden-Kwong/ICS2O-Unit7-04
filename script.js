@@ -25,14 +25,13 @@ function discountCheck () {
     // Send error message.
     document.getElementById('age-error').innerHTML = 'Please enter a valid age, using numerical symbols.'
 
-  // If age is valid, compare with word filter. 
+  // If age is valid, compare with word filter.
   } else if (day === 'MONDAY' || day === 'TUESDAY' || day === 'WEDNESDAY' || day === 'THURSDAY' || day === 'FRIDAY' || day === 'SATURDAY' || day === 'SUNDAY') {
-    
     // If user is either between 12 and 21 years of age, or the day is Tuesday or Thursday, continue.
     if ((userAge > 12 && userAge < 21) || (day === 'TUESDAY' || day === 'THURSDAY')) {
       // Output message, user is elgible for discount.
       document.getElementById('output').innerHTML = 'You are eligible for a discount!'
-      
+
       // If the above conditions are false, send message: not eligible.
     } else {
       document.getElementById('output').innerHTML = 'You are not eligible for a discount.'
